@@ -1,0 +1,32 @@
+.header{
+    width: 100%;
+    background: #1d1dbf;
+    padding:15px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header h3{
+    color: red;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+
+}
+nav ul li{
+    margin-left:35px;
+}
+nav ul li a,
+.login a{
+    font-size: 16px;
+    color: #f7f7f7;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    color: #cacac8;
+}

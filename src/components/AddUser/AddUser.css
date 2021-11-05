@@ -1,0 +1,36 @@
+.add-user{
+    width: 35%;
+    margin:3% auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px #edebeb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.add-user h3{
+    font-size: 25px;
+    font-weight: 400;
+    color: #8383ff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.form_container input,select{
+    width: 100%;
+    outline: none;
+    padding:10px 15px;
+    margin-bottom: 20px;
+}
+.form_container input:focus{
+    border: 3px solid blue;
+}
+.form_container button{
+    width: 100px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background: blue;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
