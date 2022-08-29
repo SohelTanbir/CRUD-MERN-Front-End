@@ -30,3 +30,34 @@ nav ul li a,
 nav ul li a:hover{
     color: #cacac8;
 }
+
+/*
+------------------------------------------------------------------
+---------------- Responsive Styles For Header ----------------
+------------------------------------------------------------------
+*/
+
+/* medium device */
+@media all and (max-width:767px){
+    .header {
+        padding: 15px 30px;
+    }
+}
+/* small device */
+@media all and (max-width:480px){
+    .header {
+        padding: 15px;
+    }
+    nav ul li {
+        margin-left: 15px;
+    }
+}
+/* Extra small device */
+@media all and (max-width:380px){
+    nav ul li {
+        margin-left: 12px;
+    }
+    svg:not(:root).svg-inline--fa {
+        display: none;
+    }
+}

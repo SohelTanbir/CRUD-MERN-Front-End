@@ -24,7 +24,7 @@
     border: 3px solid blue;
 }
 .form_container button{
-    width: 100px;
+    width: 120px;
     border: none;
     outline: none;
     padding: 10px 15px;
@@ -33,4 +33,29 @@
     border-radius: 5px;
     cursor: pointer;
     float: right;
+}
+.loader{
+    text-align: center;
+    color: blue;
+    padding: 30px 0;
+}
+
+/*
+------------------------------------------------------------------
+---------------- Responsive Styles For Add Users ----------------
+------------------------------------------------------------------
+*/
+
+/* medium device */
+@media all and (max-width:991px){
+    .add-user {
+        width: 90%;
+    }
+}
+/* small device */
+@media all and (max-width:575px){
+    .add-user {
+        width: 90%;
+        margin: 5% auto;
+    }
 }

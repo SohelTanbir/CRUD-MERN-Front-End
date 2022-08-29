@@ -1,18 +1,16 @@
 import React from 'react';
+import './Home.css';
+import mernImg  from '../../images/home.png'
+
+
 
 const Home = () => {
-    const style = {
-            position: "absolute",
-            left:" 50%",
-            top:' 40%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: "40px",
-            fontWeight:700,
-            color: "#1d1dbf",
-            textTransform: "uppercase",
-    }
+  
     return (
-        <h2 style={style}>CRUD Application with MERN </h2>
+        <div className='home'>
+            <h2>Welcome to CRUD Application  <br />  using <span> Mern</span> Stack</h2>
+            <img src={mernImg} alt="mern stack " />
+        </div>
     );
 };
 

@@ -2,14 +2,33 @@
 .all-user{
     max-width: 1090px;
     width: 100%;
-    margin:3% auto;
+    margin:2% auto;
     padding: 10px;
+    overflow: auto;
+}
+.user-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+.user-header select{
+    width:20%;
+    margin: 5px 0;
+    padding: 7px 10px;
+    border: 1px solid #efeff5;
 }
 .all-user h3{
     font-size: 18px;
     font-weight: 400;
     color: #8383ff;
     margin-bottom: 5px;
+}
+.all-user h2{
+    color: blue;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
 }
 .all-user table{
     width:100%;
@@ -39,4 +58,23 @@
 .all-user table td .deleteBtn{
     color: red;
 }
+.all-user .data-not-available{
+    color: brown;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 80px;
+}
 
+
+/*
+------------------------------------------------------------------
+---------------- Responsive Styles For All users ---------------
+------------------------------------------------------------------
+*/
+
+/* medium device */
+@media all and (max-width:767px){
+    .user-header select {
+        width: 25%;
+    }
+}

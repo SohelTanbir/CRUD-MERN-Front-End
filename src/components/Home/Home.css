@@ -1,0 +1,76 @@
+.home{
+    max-width: 1340px;
+    width: 100%;
+    margin: auto;
+    min-height: 80vh;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.home h2{
+    width: 45%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    color: #0b0bb1;
+    text-transform: uppercase;
+}
+.home h2 span{
+    font-weight: 700;
+    color: #FFC74A;
+}
+.home img{
+    max-width: 100%;
+    width: 450px;
+    margin: auto;
+    animation:  moveUp 3s infinite alternate;
+}
+
+
+/*animation for image*/
+@keyframes moveUp{
+    0%{
+        transform: translateY(0px);
+        transition: all 3s;
+    }
+    100%{
+        transform: translateY(15px);
+        transition: all 3s;
+    }
+}
+
+/*Reponsive styles for Home page*/
+/*medium device*/
+@media all and (max-width:991px){
+    .home h2 {
+        font-size: 26px;
+    }
+    .home img {
+        width: 400px;
+    }
+}
+/*small device*/
+@media all and (max-width:767px){
+    .home h2 {
+        width: 100%;
+        font-size: 26px;
+        padding: 20px 0 30px;
+    }
+    .home img {
+        width: 400px;
+    }
+}
+/*Extra small device*/
+@media all and (max-width:480px){
+    .home h2 {
+        font-size: 20px;
+    }
+}
+/* Extra small device */
+@media all and (max-width:380px){
+    .home h2 {
+        font-size: 16px;
+    }
+}

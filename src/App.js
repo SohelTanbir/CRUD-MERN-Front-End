@@ -9,35 +9,46 @@ import Header from './components/Header/Header.jsx';
 import Home from './components/Home/Home';
 import AllUsers from './components/AllUsers/AllUsers';
 import AddUser from './components/AddUser/AddUser';
+import UpdateUser from './components/UpdateUser/UpdateUser';
+import Login from './components/Login/Login';
+import { createContext, useState } from 'react';
+
+
+export const userContext = createContext([])
 
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState();
   return (
-    <div className="App">
-      <Router>
-        <Header />
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <div className="App">
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route path="/alluser">
+              <AllUsers />
+            </Route>
+            <Route path="/adduser">
+              <AddUser />
+            </Route>
+            <Route path="/updateUser/:id">
+              <UpdateUser />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route path="/alluser">
-            <AllUsers/>
-          </Route>
-          <Route path="/adduser">
-            <AddUser title="Add New User"/>
-          </Route>
-          <Route path="/updateUser">
-            <AddUser title="Update User"/>
-          </Route>
+          </Switch>
+        </Router>
 
-        </Switch>
-      </Router>
-
-    </div>
+      </div>
+    </userContext.Provider>
   );
 }
 
