@@ -51,6 +51,9 @@ nav ul li a:hover{
     nav ul li {
         margin-left: 15px;
     }
+    .login a{
+        color: #FFC74A;
+    }
 }
 /* Extra small device */
 @media all and (max-width:380px){

@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUsers, faUserPlus, faUser } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
-import { useContext } from 'react/cjs/react.development';
 import { userContext } from '../../App';
+
+
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+    const [loggedInUser, setLoggedInUser] = useContext(userContext)
     const userName = loggedInUser?.email.split("@")[0];
 
 
