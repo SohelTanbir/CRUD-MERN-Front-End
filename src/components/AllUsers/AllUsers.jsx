@@ -32,7 +32,7 @@ const notify = (msg) => toast(msg, {autoClose: 1000,});
             .catch(err => {
                 console.log(err)
             })
-    }, [filterValue])
+    }, [filterValue, users])
     // delete user from database
     const deleteUser = (id) => {
        if(window.confirm("Do want to Delete The User ?")){
@@ -49,9 +49,7 @@ const notify = (msg) => toast(msg, {autoClose: 1000,});
                     if (response.ok) {
                         notify('Success!');
                         // relaod window after 1 sec
-                       setTimeout(()=>{
-                        window.location.reload();
-                       }, 1000)
+                      
                     }
                     else if(response.status === 500){
                         notify('Authentication required!');

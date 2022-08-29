@@ -16,7 +16,7 @@ const AddUser = () => {
         password:'',
         phone: '',
         city: '',
-        role: ''
+        role: 'user'
     });
     const [selectedValue, setSelectedValue] = useState("user")
 
@@ -50,7 +50,7 @@ const handleDefualtValue = (e)=>{
         })
             .then(result => {
                 if (result.ok){
-                    setError('user added Successfully!');
+                    notify('User added successfully!');
                     // redirect to all users page after 1
                     setTimeout(()=>{
                         history.push('/alluser')
@@ -83,7 +83,7 @@ const handleDefualtValue = (e)=>{
                         <option value="developer">Developer</option>
                     </select><br />
                     <ToastContainer />
-                    <button onClick={()=> notify(error)}>Add now</button>
+                    <button>Add now</button>
                 </form>
             </div>
         </div>
